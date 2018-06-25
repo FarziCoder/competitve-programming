@@ -1,0 +1,65 @@
+class stack
+{
+   private:
+        
+         stack *head;
+         stack *next;
+         char data;
+   public:
+        
+        void push(char sign)
+            {
+                stack* temp=new stack;
+                //temp=head;
+                temp->next=head;
+                temp->data=sign;
+                head=temp;
+                             
+                
+            }
+         char pop()
+            {   
+                if(!head)
+                    return 0;
+                char temp=head->data;
+                //head->next=head;
+                //stack* store=head;
+                head=head->next;
+                //delete head;
+                return temp;
+                         
+             
+            }
+
+            
+         
+};
+class queue
+{   
+    private:
+           queue* head;
+           queue* next;
+           char data;
+    public:
+            char pop()
+                {
+                    char temp=head->data;
+                    head=head->next;;
+                    //how to delete head                                        
+                    return temp;
+                                       
+                    
+                }
+             void push(char sign)
+                 {
+                     queue* temp;
+                     temp->data=sign;
+                     temp->next=head;
+                     head=temp;
+                                          
+                 }   
+            
+    
+    
+    
+};
